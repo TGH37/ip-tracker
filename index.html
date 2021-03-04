@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+ integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+ crossorigin=""></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="header-img"></div>
+  <header class="page-header">
+    <h1 class="page-header__title">IP Address Tracker</h1>
+    <form class="search-form">
+      <input class="search-form__input" placeholder="Search for any IP address or domain"></input>
+      <button class="search-form__btn">></button>
+    </form>
+  </header>
+  <section class="info-card-container">
+    <div class="info-card">
+      <h2 class="info-card__title">IP Address</h2>
+      <span class="info-card__content">Content</span>
+    </div>
+    <div class="info-card">
+      <h2 class="info-card__title">Location</h2>
+      <span class="info-card__content">Content</span>
+    </div>
+    <div class="info-card">
+      <h2 class="info-card__title">Timezone</h2>
+      <span class="info-card__content">UTC - Content</span>
+    </div>
+    <div class="info-card">
+      <h2 class="info-card__title">ISP</h2>
+      <span class="info-card__content">Content</span>
+    </div>
+     <!-- add offset value dynamically using the API -->
+  </section>
+  <div id="mapid"></div>
+  <footer class="footer-helper attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Tom Hayton</a>.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* Global Initial */
+:root {
+    --clr-primary: hsl(0, 0%, 59%);
+    --clr-primary-dark: hsl(0, 0%, 17%);
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url(https://fonts.google.com/specimen/Rubik);
+}
+body {
+    font-family: Rubik;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1,
+h2,
+span {
+    margin: 0;
+    padding: 0;
+}
+
+.page-header__title {
+    color: white;
+    font-weight: 400;
+    padding: 1rem 0;
+}
+
+.info-card__title{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--clr-primary);
+}
+.info-card__content{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--clr-primary-dark);
+}
+
+.header-img {
+    background-image: url(./images/pattern-bg.png);
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+}
+
+.search-form {
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.search-form :hover {
+    cursor: pointer;
+}
+
+.search-form *{
+    --border-radius: .5rem;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    border: none;
+    font-size: 18px;
+}
+
+.search-form__input {
+    width: 70%;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    padding: 0 1rem;
+    color:var(--clr-primary-dark);
+}
+
+.search-form__btn {
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    padding: 0 1rem;
+    background-color: black;
+    color: white;
+}
+
+.search-form__input:focus {
+    outline-style: none;
+}
+
+.search-form__btn:hover,
+.search-form__btn:focus {
+    background-color: var(--clr-primary-dark);
+    
+}
+
+.info-card-container {
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    margin-top: 3rem;
+
+    border-radius: 1rem;
+    padding: 1rem 0;
+}
+
+.info-card + .info-card {
+    margin-top: 1rem;
+}
+#mapid { height: 180px; }
+
+
+/* Mobile Design */
+@media only screen and (max-width: 375px) {
+    .search-form__input:focus {
+        outline-style: none;
+    }
+
+    .search-form__btn:focus {
+        outline-style: none;
+        
+    }
+}
+
+
+/* Desktop Design */
+@media only screen and (min-width: 1440px) {
+
+}
