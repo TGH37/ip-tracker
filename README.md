@@ -1,3 +1,7 @@
+Hello and welcome to my solution to the 'IP tracker' challenge, created on [Frontend Mentor](https://www.frontendmentor.io).
+Below is the information contained in the original README.md file, provided by Frontend Mentor
+
+
 # Frontend Mentor - IP Address Tracker
 
 ![Design preview for the IP Address Tracker coding challenge](./design/desktop-preview.jpg)
