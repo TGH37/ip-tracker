@@ -8,11 +8,17 @@
     font-family: Rubik;
     src: url(https://fonts.google.com/specimen/Rubik);
 }
+
+html {
+    /* min-height: 100%; */
+    /* position: relative; */
+}
 body {
     font-family: Rubik;
     margin: 0;
     padding: 0;
     text-align: center;
+    /* height: 100%; */
 }
 
 h1,
@@ -20,6 +26,22 @@ h2,
 span {
     margin: 0;
     padding: 0;
+}
+
+.page-header {
+    height: 250px;
+    position: relative;
+}
+
+.page-header::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url(./images/pattern-bg.png);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
 }
 
 .page-header__title {
@@ -37,15 +59,6 @@ span {
     font-size: 18px;
     font-weight: 700;
     color: var(--clr-primary-dark);
-}
-
-.header-img {
-    background-image: url(./images/pattern-bg.png);
-    height: 250px;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    background-size: cover;
 }
 
 .search-form {
@@ -88,26 +101,40 @@ span {
 .search-form__btn:hover,
 .search-form__btn:focus {
     background-color: var(--clr-primary-dark);
-    
+}
+
+.search-form__btn:active {
+    background-color: var(--clr-primary);
 }
 
 .info-card-container {
+    --containerWidth: 90%;
+
+    position: absolute;
+    z-index: 1;
+    left: calc((100% - var(--containerWidth))/2);
+
     display: flex;
     flex-direction: column;
 
-    background-color: white;
-    width: 90%;
+    width: var(--containerWidth);
     margin: auto;
-    margin-top: 3rem;
-
-    border-radius: 1rem;
     padding: 1rem 0;
+    margin-top: -7rem;
+    
+    background-color: white;
+    border-radius: 1rem;
 }
 
 .info-card + .info-card {
     margin-top: 1rem;
 }
-#mapid { height: 180px; }
+
+#mapid { 
+    min-height: 200px;
+    z-index: -0;
+    height: calc(100vh - 250px);
+}
 
 
 /* Mobile Design */
@@ -122,8 +149,24 @@ span {
     }
 }
 
-
 /* Desktop Design */
 @media only screen and (min-width: 1440px) {
+    .info-card-container {
+        --containerWidth: 60%;
+        min-height: 75px;
+        flex-direction: row;
+        margin-top: -3.5rem;
+        justify-content: space-around;
+        align-items: center ;
 
+        width: var(--containerWidth);
+    }
+
+    .info-card {
+        width: 100%;
+    }
+    .info-card + .info-card {
+        margin-top: 0;
+        border-left: var(--clr-primary) solid 1px;
+    }
 }
